@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bc04jgq832nvc"]
+[gd_scene load_steps=15 format=3 uid="uid://bc04jgq832nvc"]
 
 [ext_resource type="Script" uid="uid://51s5dng0sru5" path="res://Main.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dm5jrnxmxnuof" path="res://Ball.tscn" id="2"]
@@ -31,6 +31,12 @@ bounce = 0.5
 
 [sub_resource type="PhysicsMaterial" id="9"]
 bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0du0"]
+bounce = 10.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cm0pq"]
+bounce = 10.0
 
 [node name="Main" type="Node"]
 script = ExtResource("1")
@@ -131,3 +137,33 @@ texture = ExtResource("3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall6"]
 rotation = 1.5708
 shape = SubResource("2")
+
+[node name="Ball" parent="." instance=ExtResource("2")]
+position = Vector2(365, 115)
+
+[node name="Ball2" parent="." instance=ExtResource("2")]
+position = Vector2(201, 239)
+
+[node name="Ball3" parent="." instance=ExtResource("2")]
+position = Vector2(765, 112)
+
+[node name="Ball4" parent="." instance=ExtResource("2")]
+position = Vector2(892, 155)
+
+[node name="Ball5" parent="." instance=ExtResource("2")]
+position = Vector2(799, 211)
+physics_material_override = SubResource("PhysicsMaterial_r0du0")
+
+[node name="Ball6" parent="." instance=ExtResource("2")]
+position = Vector2(657, 142)
+rotation = 1.17585
+
+[node name="Ball7" parent="." instance=ExtResource("2")]
+position = Vector2(316, 202)
+rotation = 1.17585
+
+[node name="Ball8" parent="." instance=ExtResource("2")]
+position = Vector2(147, 59)
+rotation = 1.17585
+physics_material_override = SubResource("PhysicsMaterial_cm0pq")
+gravity_scale = 10.0
