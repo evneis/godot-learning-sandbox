@@ -8,6 +8,7 @@
 position = Vector2(819, 437)
 
 [node name="Timer" type="Timer" parent="Sprite2D"]
+autostart = true
 
 [node name="Button" type="Button" parent="."]
 offset_left = 126.0
